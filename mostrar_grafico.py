@@ -9,7 +9,7 @@ def mostrar_grafico(dados, titulo, cor):
     for i in range(0, int((len(dados)/2)), 1):
       plt.axvline(i, color="black", linestyle="--")
     plt.axvline(len(dados)/2, color="black", linestyle="--")
-    # Impressão em etapas (formato digital)
+    # Impressão em formato digital
     plt.step(np.arange(0, (len(dados)/2)+0.5, 0.5), dados + [dados[len(dados)-1]], where="post", color=cor)
     plt.title(titulo)
     plt.show()
