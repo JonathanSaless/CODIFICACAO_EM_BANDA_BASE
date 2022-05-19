@@ -4,6 +4,7 @@ import pseudoternary as pst
 import b8zs
 import manchester as mct
 import mostrar_grafico as mg
+import transforma_lista as tl
 
 def main():
     seq = input("DIGITE UMA SEQUENCIA DE BITS:")
@@ -24,7 +25,16 @@ def main():
     #MANCHESTER
     manchester = mct.MANCHESTER(lista)
     mg.mostrar_grafico(lista, manchester, "MANCHESTER", "red")
-    
+    #APRESENTANDO CÓDIGOS RESULTANTES EM FORMATO DE LISTA
+    print("CÓDIGOS RESULTANTES:")
+    print("NRZ:", nrz,"\nPSEUDOTERNARY:", pseudoternary, "\nB8ZS:", b8zs, "\nMANCHESTER:", manchester)
+    #APRESENTANDO CÓDIGOS RESULTANTES COMO STRINGS E CONVERTENDO OS VALORES -1 E 1
+    strnrz = tl.transforma_lista(nrz)
+    strpseudo = tl.transforma_lista(pseudoternary)
+    strb8zs = tl.transforma_lista(b8zs)
+    strmanch = tl.transforma_lista(manchester)
+    print("CÓDIGOS RESULTANTES 2:")
+    print("NRZ:", strnrz,"\nPSEUDOTERNARY:", strpseudo, "\nB8ZS:", strb8zs, "\nMANCHESTER:", strmanch)    
     
 if __name__ == '__main__':
     main()
