@@ -1,3 +1,2 @@
-#NRZ
 def NRZ(dados):
-    return dados
+  return dados
