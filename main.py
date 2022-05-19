@@ -15,23 +15,23 @@ def main():
     clk.CLOCK(lista)
     #NRZ
     nrz_ = nrz.NRZ(lista)
-    mg.mostrar_grafico(lista, nrz_, "NRZ", "green")
+    mg.mostrar_grafico(nrz_, "NRZ", "green")
     #PSEUDOTERNARY
     pseudoternary = pst.PSEUDOTERNARY(lista)
-    mg.mostrar_grafico(lista, pseudoternary, "PSEUDOTERNARY", "blue")
+    mg.mostrar_grafico(pseudoternary, "PSEUDOTERNARY", "blue")
     #B8ZS
     b8zs_ = b8zs.B8ZS(lista)
-    mg.mostrar_grafico(lista, b8zs_, "B8ZS", "gold")
+    mg.mostrar_grafico(b8zs_, "B8ZS", "gold")
     #MANCHESTER
     manchester = mct.MANCHESTER(lista)
-    mg.mostrar_grafico(lista, manchester, "MANCHESTER", "red")
+    mg.mostrar_grafico(manchester, "MANCHESTER", "red")
     #APRESENTANDO CÓDIGOS RESULTANTES EM FORMATO DE LISTA
     print("CÓDIGOS RESULTANTES:")
-    print("NRZ:", nrz,"\nPSEUDOTERNARY:", pseudoternary, "\nB8ZS:", b8zs, "\nMANCHESTER:", manchester)
+    print("NRZ:", nrz_,"\nPSEUDOTERNARY:", pseudoternary, "\nB8ZS:", b8zs_, "\nMANCHESTER:", manchester)
     #APRESENTANDO CÓDIGOS RESULTANTES COMO STRINGS E CONVERTENDO OS VALORES -1 E 1
-    strnrz = tl.transforma_lista(nrz)
+    strnrz = tl.transforma_lista(nrz_)
     strpseudo = tl.transforma_lista(pseudoternary)
-    strb8zs = tl.transforma_lista(b8zs)
+    strb8zs = tl.transforma_lista(b8zs_)
     strmanch = tl.transforma_lista(manchester)
     print("CÓDIGOS RESULTANTES 2:")
     print("NRZ:", strnrz,"\nPSEUDOTERNARY:", strpseudo, "\nB8ZS:", strb8zs, "\nMANCHESTER:", strmanch)    
